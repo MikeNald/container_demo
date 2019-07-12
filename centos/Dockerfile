@@ -1,10 +1,11 @@
-FROM https://hub.docker.com/_/centos/:latest
+FROM scratch
+ADD https://buildlogs.centos.org/centos/7/docker/CentOS-7-20140625-x86_64-docker_01.img.tar.xz /
 
-#RUN yum update --disableplugin=subscription-manager -y && rm -rf /var/cache/yum
-RUN yum install httpd -y && rm -rf /var/cache/yum
-# Add default Web page and expose port
-RUN echo "The Web Server is Running, HELLO MR CUSTOMER" > /var/www/html/index.html
-EXPOSE 80
-# Start the service
-CMD ["-D", "FOREGROUND"]
-ENTRYPOINT ["/usr/sbin/httpd"]
+LABEL org.label-schema.schema-version="1.0" \
+    org.label-schema.name="CentOS Base Image" \
+    org.label-schema.vendor="CentOS" \
+    org.label-schema.license="GPLv2" \
+    org.label-schema.build-date="20190305"
+
+CMD ["/bin/bash"]
+
