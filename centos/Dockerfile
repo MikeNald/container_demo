@@ -1,11 +1,4 @@
-FROM scratch
-ADD centos-7-x86_64-docker.tar.xz /
-
-LABEL org.label-schema.schema-version="1.0" \
-    org.label-schema.name="CentOS Base Image" \
-    org.label-schema.vendor="CentOS" \
-    org.label-schema.license="GPLv2" \
-    org.label-schema.build-date="20190305"
+FROM https://hub.docker.com/_/centos/:latest
 
 #RUN yum update --disableplugin=subscription-manager -y && rm -rf /var/cache/yum
 RUN yum install httpd -y && rm -rf /var/cache/yum
