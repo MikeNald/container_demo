@@ -1,6 +1,6 @@
 #FROM scratch
 #ADD https://buildlogs.centos.org/centos/7/docker/CentOS-7-20140625-x86_64-docker_01.img.tar.xz /
-FROM Centos:7
+FROM centos:7
 
 #LABEL org.label-schema.schema-version="1.0" \
 #    org.label-schema.name="CentOS Base Image" \
