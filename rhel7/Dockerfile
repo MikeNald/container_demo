@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel-minimal
+FROM registry.access.redhat.com/rhel
 USER root
 LABEL maintainer="mnaldini"
 # Update image
