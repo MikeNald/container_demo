@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi
 USER root
-LABEL maintainer="mnaldini"
+LABEL maintainer="mnaldinii"
 # Update image
 RUN yum update --disableplugin=subscription-manager -y && rm -rf /var/cache/yum
 RUN yum install --disableplugin=subscription-manager httpd -y && rm -rf /var/cache/yum
